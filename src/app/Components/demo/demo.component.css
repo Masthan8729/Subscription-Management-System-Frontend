@@ -1,0 +1,14 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 500px;
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 50px;
+    background-color: aquamarine;
+}
+.clear{
+    clear:both;
+  }
+  

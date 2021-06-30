@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+ }
+ .body{
+   background-color:#095679;
+    width: 1366px;
+    height: 1080px;
+    /*  background-image: url("/assets/images/hpbg5.jpg"); 
+     background-repeat: no-repeat; */
+   /* background-color: #D9AFD9; background-image: linear-gradient(0deg,#373B44 0%, #4286f4 100%); */
+ }
+.container h1{
+    margin-left: 200px;
+    font-size: 50px;
+    font-weight: bolder;
+    color:white;
+}
+
+  
+
+  .modal{
+      margin-top: 100px;
+      margin-left: 300px;
+      width: 500px;
+      height: 400px;
+  }
+  table,tr,td,th{
+      border: 1px solid black;
+      padding: 10px;
+      margin: 5px;
+  }
+  th{
+      font-weight: bold;
+  }
+  #navbarNav{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+ } 
+ 
+  .navbar{
+     width: 1300px;
+    padding: 10px;
+    opacity: 1;
+ } 
+ .nav-link{
+    color:white;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding:5px;
+    margin: 10px;
+    font-family: 'Poppins', sans-serif;
+ }
+ .nav-link:hover{
+    background-color:white;
+    color: black;
+  }
+  .title{
+    font-size:25px ;
+    color: white;
+    margin-top:20px;
+    margin-left:400px;
+  }
+  .row{
+   
+   
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+  .Mysubscriptions{
+   
+   
+    margin-top: 20px;
+    margin-left: 130px;
+    overflow: auto;
+  }
+  .subtext{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white !important;
+    padding: 70px 0;
+  }
+  .card{
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px;
+  }

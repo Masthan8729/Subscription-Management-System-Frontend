@@ -1,0 +1,31 @@
+<div class="body">
+  <button class="btn btn-success m-3" (click)="goToHome()" >Go Back</button>
+<div class="container">
+    <h2>My Transactions</h2>          
+    <table class="table table-striped">
+      <thead style="text-align: center;">
+        <tr>
+          <th>Transaction Item</th> 
+          <th>Transaction Amount</th>
+          <th>Plan</th>
+          <th>Transaction Date
+            <small style="display: block;">(dd-mm-yyyy)</small>
+          </th>
+          <th>Plan Ends
+            <small style="display: block;">(dd-mm-yyyy) </small>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{transaction.transactionItem}}</td>
+          <td>{{transaction.transactionAmount}}</td>
+          <td>{{transaction.plan}}</td>
+          <td>{{transaction.transactionDate}}</td>
+          <td>{{transaction.planEndDate}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</div>

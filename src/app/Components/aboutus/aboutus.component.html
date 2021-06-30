@@ -1,0 +1,18 @@
+
+    <div class="container" id="aboutUs">
+        <h1>About Us</h1>
+        <p class="p1">Subscription Management System is one of the best tool out there in the market to manage all your online subscriptions at one place and at one go...</p>
+    <p>For any queries write to us: </p>
+    <form #aboutusForm="ngForm">
+        <div class="form-group">
+        <label for="Email"> Email</label>
+        <input type="email" class="form-control" required name="email" #email="ngModel" [(ngModel)]=user.email pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[a-z]{2,4}$" [class.is-invalid]="email.invalid && email.touched">
+          
+        <div *ngIf="email.errors && (email.invalid || email.touched)">
+            <small class="text-danger" [class.d-none]="email.valid || email.untouched"  *ngIf="email.errors.required">Email is required</small>
+            <small class="text-danger" *ngIf="email.errors.pattern">Invalid Email</small>
+        </div>
+        </div>
+</form>
+    <textarea required name="" id="" cols="30" rows="2"></textarea><span><button [disabled]="aboutusForm.form.invalid" class="btn btn-primary float-right">Send</button></span>
+    </div>

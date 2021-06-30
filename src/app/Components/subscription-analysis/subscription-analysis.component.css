@@ -1,0 +1,14 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+#chartDiv1{
+    display: block;
+    margin-left: 200px;
+}
+#chartDiv2{
+    margin-top: 50px;
+    display: block;
+    width: 700px;
+    height: 400px;
+    margin-left: 200px;
+}

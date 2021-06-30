@@ -1,0 +1,30 @@
+<div class="top">
+<div class="body">
+    <h1 class="title">Payment</h1>
+    <div class="data">
+    <pre>
+
+      Subscription Name         :  {{subscription.subscriptionName}}
+
+      Subscription Category   :  {{subscription.subscriptionType}}
+
+      Selected plan                   :  {{planValue}} ({{plan}})
+    </pre>
+    <p>Amount to be Paid : {{planValue}}</p>
+    <p>Saved cards</p>
+    <div *ngFor="let savedCard of card">
+    <span style="float: left; width: 250px;">{{savedCard.cardNo}}</span><span style="float: left; width: 150px;" >{{savedCard.nameOnCard}}</span><span style="float: left; margin-left:20px;"><input type="radio" name="savedCards" (change)="savedcards(savedCard.cardId)"></span><br>
+  </div> 
+  </div> 
+ 
+  <button class="btn btn-primary" style="margin: 20px; width: 100px;" (click)="goToPlans(subscription.subscriptionId)">Go Back</button><span><Button class="btn btn-primary" style="margin-left: 250px; width: 80px;" (click)="gotoCardDetails()">Pay</Button></span>
+
+</div>
+</div>
+
+
+
+
+
+
+

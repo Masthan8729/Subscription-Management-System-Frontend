@@ -1,0 +1,17 @@
+<div class="body">
+    <div class="container">
+        <button class="btn btn-success p-2 m-3" (click)="goToHome()">Go Back</button>
+        <input class="form-control form-control-lg mr-sm-2" type="search" placeholder="Search..." aria-label="Search" id="search">
+             <div class="row" >
+                    <div class="card col-sm-2" *ngFor="let subscription of subscriptions | slice:8:100 ; let i=index" style="width: 200px; height: 150px; margin: 20px;">
+                    <div class="card-body p-3">
+                    <h5 class="card-title" style="font-size: 22px; font-weight: bold;">{{subscription.subscriptionName}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{subscription.subscriptionType}}</h6>
+                    <button style="padding: 5px;" type="button" class="btn btn-success"  (click)="subscriptionDetails(subscription.subscriptionId)" ><!-- data-toggle="modal" data-target="#exampleModalCenter" -->
+                    Details
+                    </button>
+                    </div> <br> 
+                    </div> 
+             </div>
+    </div>
+</div>

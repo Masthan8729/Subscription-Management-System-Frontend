@@ -1,0 +1,42 @@
+<div class="top">
+   <div class="body">
+      <h3 style="text-align: center;font-weight: bold; margin: 20px;"> Subscription Details</h3>
+      <div class="subdetails">
+      <!-- <p>Subscription Id &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;   :&nbsp;&nbsp;{{subscription.subscriptionId}}</p>
+      <p>Subscription Name &nbsp;&nbsp;&nbsp;  &nbsp;  :&nbsp;&nbsp;{{subscription.subscriptionName}}</p>
+      <p>Subscription Category&nbsp; :&nbsp;&nbsp;{{subscription.subscriptionType}}</p> -->
+   <pre>
+      
+      Subscription Name         :  {{subscription.subscriptionName}}
+
+      Subscription Category   :  {{subscription.subscriptionType}}
+   </pre>
+   
+   </div>
+     <h5 style="margin-left: 25px;font-weight: bold;">Plans:</h5>
+
+
+
+     <form #planForm="ngForm">
+          <table>
+              <tr>
+              <th>1 Month</th>
+              <th>3 Months</th>
+              <th>6 Months</th>
+              <th>1 Year</th>
+            </tr>
+            <tr>
+                <td>{{plan.monthly}} <input type="radio" name="plans"  style="margin:10px" value="{{plan.monthly}}" [(ngModel)]="planValue" (change)="ChangeMethods(monthly)" required></td>   <!-- (click)="getValue(plan.monthly)"> -->
+                <td>{{plan.threeMonths}}<input type="radio" name="plans" style="margin:10px" value="{{plan.threeMonths}}" [(ngModel)]="planValue" (change)="ChangeMethods(threeMonths)"></td>
+                <td>{{plan.sixMonths}}<input type="radio" name="plans" style="margin:10px" value="{{plan.sixMonths}}" [(ngModel)]="planValue" (change)="ChangeMethods(sixMonths)"></td>
+                <td>{{plan.oneYear}}<input type="radio" name="plans" style="margin:10px" value="{{plan.oneYear}}" [(ngModel)]="planValue" (change)="ChangeMethods(oneYear)"></td>
+               </tr>
+
+          </table>
+         </form>
+      
+       <button class="btn btn-primary" style="margin:20px;" (click)="gotoHome()">Go Back</button><span><button [disabled]="planForm.form.invalid" (click)="callMethods(subscription.subscriptionId)" class="btn btn-primary" style="margin:20px; margin-left: 150px;">Proceed To Checkout</button></span>
+      </div>
+
+  
+</div>

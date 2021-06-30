@@ -1,0 +1,33 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.body{
+    position: absolute;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px;
+    width: 500px;
+    margin-left: 432px;
+    margin-top: 50px;
+}
+.top{
+    position: relative;
+    width: 1366px;
+    height: 100vh;
+    background-image: url("/assets/images/paymentbg.jpg"); 
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+.data{
+    margin-left:15px;
+    font-size: 20px;
+}
+pre{
+    margin-left:-30px;
+}
+

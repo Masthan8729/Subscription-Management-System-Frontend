@@ -1,0 +1,40 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.top{
+    position: relative; 
+    height: 770px;
+    width: 1366px;
+    background-image: url("/assets/images/detailsbg.jpg"); 
+}
+.body{
+    position: absolute;
+    width: 500px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px;
+    margin-top: 50px;
+    margin-left: 400px;
+}
+.subdetails{
+    margin-left: 20px;
+    font-size: 20px;
+}
+table,tr,td,th{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+th{
+    font-weight: bold;
+}
+table{
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 450px;
+}
+pre{
+    margin-left:-30px;
+}

@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="form">
+        <form #cardForm="ngForm" (ngSubmit)="paymentSuccess()">
+            <h3 style="text-align: center; margin: 20px;">Enter Card Details</h3>
+            <p class="text-danger" style="text-align: center ;">{{errorMsg}}</p>
+            <div class="form-group m-2">
+                <label for="cardNo"> Card No</label>
+                <input type="text" class="form-control" name="cardNo"  required #cardNo="ngModel" [class.is-invalid]="cardNo.invalid && cardNo.touched" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" [(ngModel)]="card.cardNo" >
+              
+                <div *ngIf="cardNo.errors && (cardNo.invalid || cardNo.touched)">
+                  <small class="text-danger" [class.d-none]="cardNo.valid || cardNo.untouched"  *ngIf="cardNo.errors.required">Card number is required</small>
+                  <small class="text-danger" *ngIf="cardNo.errors.pattern">Enter valid card number</small>
+              </div>
+              </div>
+              <div class="form-group m-2">
+                <label for="nameOnCard"> Name On Card</label>
+                <input type="text" class="form-control" required #nameOnCard="ngModel" [class.is-invalid]="nameOnCard.invalid && nameOnCard.touched" name="nameOnCard" pattern="^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$" [(ngModel)]="card.nameOnCard" >
+               
+                <div *ngIf="nameOnCard.errors && (nameOnCard.invalid || nameOnCard.touched)">
+                  <small class="text-danger" [class.d-none]="nameOnCard.valid || nameOnCard.untouched"  *ngIf="nameOnCard.errors.required">Name is required</small>
+                  <small class="text-danger" *ngIf="nameOnCard.errors.pattern">Enter valid name</small>
+              </div>
+              </div>  
+            <div class="form-group m-2" style="width: 46%; float: left;">
+              <label for="expiryDate"> Expiry Date</label>
+              <input type="text"  class="form-control" name="expiryDate" required #expiryDate="ngModel" [class.is-invalid]="expiryDate.invalid && expiryDate.touched" name="expiryDate" [(ngModel)]="card.expiryDate" pattern="^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$">
+             
+              <div *ngIf="expiryDate.errors && (expiryDate.invalid || expiryDate.touched)">
+                <small class="text-danger" [class.d-none]="expiryDate.valid || expiryDate.untouched"  *ngIf="expiryDate.errors.required">Expiry date is required</small>
+                <small class="text-danger" *ngIf="expiryDate.errors.pattern">Enter valid expiry date</small>
+            </div>
+            </div>  
+          <div class="form-group m-2" style="width: 46%; float: left;">
+            <label for="cvv">CVV</label>
+            <input type="password" class="form-control" name="cvv"  required #cvv="ngModel" [class.is-invalid]="cvv.invalid && cvv.touched" [(ngModel)]="card.cvv" pattern="^[0-9]{3,4}$"> 
+            
+            <div *ngIf="cvv.errors && (cvv.invalid || cvv.touched)">
+              <small class="text-danger" [class.d-none]="cvv.valid || cvv.untouched"  *ngIf="cvv.errors.required">cvv is required</small>
+              <small class="text-danger" *ngIf="cvv.errors.pattern">Enter valid cvv number</small>
+          </div>
+          </div> 
+          <div class="form-group m-2" style="clear:both" >
+            <input type="checkbox" style="margin-top: 20px;" [disabled]="cardForm.form.invalid" (change)="saveCard()"><label style="margin-left: 10px;"> Save card</label>
+          </div>
+        
+        <button class="btn btn-primary" style="width: 100px; margin-left: 200px; margin-bottom: 20px;" [disabled]="cardForm.form.invalid" type="submit">Pay</button>
+         
+        </form>
+    </div>
+</div>

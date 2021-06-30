@@ -1,0 +1,26 @@
+
+<div class="container-fluid">
+  <button class="btn btn-success" (click)="goToHome()" style="margin: 20px;">Go Back</button>
+  <h1 style="margin: 30px; text-align: center;">Subscription Analysis</h1>
+  <div id="chartDiv1">
+    <h3>Subscriptions By Date</h3>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Example select</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option value="Daily">Daily</option>
+        <option value="Weekly">Weekly</option>
+        <option value="Monthly">Monthly</option>
+        <option value="Yearly">Yearly</option>
+        
+      </select>
+  
+    </div>
+    <h5 style="text-align: center; font-weight: bold;">{{msg1}}</h5>
+     <canvas id="mainchart" width="700px" height="400px"></canvas>
+      </div>
+    <div id="chartDiv2">
+      <h3>Subscription Item - Plan Value</h3>
+      <h5 style="text-align: center; font-weight: bold;">{{msg}}</h5> 
+        <canvas id="linechart"></canvas>
+    </div>
+  </div>

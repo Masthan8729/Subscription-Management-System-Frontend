@@ -1,0 +1,25 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+/* .body{
+    position: relative;
+    width: 1360px;
+    height: 700px;
+    background-image: url("/assets/images/hpbg.jpg");
+} */
+.container{
+    margin-top: 20px;
+}
+.container h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+th,td{
+    text-align: center;
+}
+th{
+    font-size: 18px;
+    font-weight: bold;
+}
